@@ -1,0 +1,18 @@
+{
+    "vendor-name": "ensinaweb",
+    "require": {
+        "php": ">= 7.0"
+    },
+    "authors": [
+        {
+            "name": "Alexsander Silva",
+            "email": "oalexsanderm@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "EW\\": "vendor/EW/"
+        }
+    }
+}
