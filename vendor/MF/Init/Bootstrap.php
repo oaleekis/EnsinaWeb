@@ -1,6 +1,6 @@
 <?php
 
-namespace EW\Init;
+namespace MF\Init;
 
 abstract class Bootstrap {
 	private $routes;

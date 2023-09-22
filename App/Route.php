@@ -2,7 +2,7 @@
 
 namespace App;
 
-use EW\Init\Bootstrap;
+use MF\Init\Bootstrap;
 
 class Route extends Bootstrap {
 
@@ -14,10 +14,16 @@ class Route extends Bootstrap {
 			'action' => 'index'
 		);
 
-		$routes['sobre_nos'] = array(
-			'route' => '/sobre_nos',
+		$routes['inscreverse'] = array(
+			'route' => '/inscreverse',
 			'controller' => 'indexController',
-			'action' => 'sobreNos'
+			'action' => 'inscreverse'
+		);
+
+		$routes['registrar'] = array(
+			'route' => '/registrar',
+			'controller' => 'indexController',
+			'action' => 'registrar'
 		);
 
 		$this->setRoutes($routes);

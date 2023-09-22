@@ -1,8 +1,10 @@
 <?php
 
-    require_once "../vendor/autoload.php";
+	//ini_set('error_reporting', 'E_STRICT');
 
-    $route = new \App\Route;
+	require_once "../vendor/autoload.php";
 
+	$route = new \App\Route;
+	
 
 ?>
