@@ -22,26 +22,29 @@
 
 		<div class="col-md-6 pt-4 pl-5 pr-5 d-flex align-items-center">
 			<div class="login-card">
-				<form>
+				<form method="post" action="/autenticar">
 					<div class="d-flex flex-column justify-content-center">
 						<div class="p-3">
-							<input type="text" class="form-control" placeholder="E-mail">
+							<input type="text" name="email" class="form-control" placeholder="E-mail">
 						</div>
 						<div class="p-3">
-							<input type="text" class="form-control" placeholder="Senha">
+							<input type="password" name="password" class="form-control" placeholder="Senha">
 						</div>
 						<div class="p-3">
 							<button type="submit" class="btn btn-primary btn-block mb-2">Entrar</button>
 						</div>
+						<?php if ($this->view->login == 'erro') { ?>
+							<span class="px-3 text text-danger">*E-mail e ou senha inválidos.</span>
+						<?php } ?>
 					</div>
 				</form>
 
 				<hr>
-	
+
 				<div class="row">
 					<div class="col pl-5 pr-5 d-flex flex-column ">
 						<h1 class="title">Junte-se à nossa comunidade de alunos dedicados</h1>
-	
+
 						<h2 class="mt- subtitle">Inicie sua jornada de aprendizado conosco.</h2>
 						<a href="/inscreverse" class="btn btn-success btn-block mb-2">Criar Conta</a>
 					</div>
