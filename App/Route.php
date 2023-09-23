@@ -30,6 +30,16 @@ class Route extends Bootstrap {
 			'controller' => 'AuthController',
 			'action' => 'autenticar'
 		);
+		$routes['dashboard'] = array(
+			'route' => '/dashboard',
+			'controller' => 'AppController',
+			'action' => 'dashboard'
+		);
+		$routes['logout'] =array(
+			'route' => '/logout',
+			'controller' => 'AuthController',
+			'action' => 'logout'
+		);
 
 		$this->setRoutes($routes);
 	}

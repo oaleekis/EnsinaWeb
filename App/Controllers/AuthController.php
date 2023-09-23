@@ -6,9 +6,11 @@ namespace App\Controllers;
 use MF\Controller\Action;
 use MF\Model\Container;
 
-class AuthController extends Action {
+class AuthController extends Action
+{
 
-    public function autenticar() {
+    public function autenticar()
+    {
 
         $user = Container::getModel('User');
 
@@ -17,10 +19,24 @@ class AuthController extends Action {
 
         $user->autenticar();
 
-        if($user->__get('id') != '' && $user->__get('name')){
-            echo 'Autenticado'; 
+        if ($user->__get('id') != '' && $user->__get('name')) {
+            echo 'Autenticado';
+
+            session_start();
+
+            $_SESSION['id'] = $user->__get('id');
+            $_SESSION['name'] = $user->__get('name');
+
+            header('Location: /dashboard');
         } else {
             header('Location: /?login=erro');
         }
+    }
+
+    public function logout()
+    {
+        session_start();
+        session_destroy();
+        header('Location: /');
     }
 }
