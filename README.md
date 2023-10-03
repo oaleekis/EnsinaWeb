@@ -26,7 +26,7 @@ Para iniciar o projeto em seu ambiente local, siga os passos abaixo:
 1. Clone o repositório para sua máquina:
 
    ```bash
-   git clone https://github.com/seu-usuario/EnsinaWeb.git
+   git clone https://github.com/oaleekis/EnsinaWeb.git
 
 2. **Configurar o Servidor Web:** Configure seu servidor web (como Apache ou Nginx) para apontar para a pasta `public/` como raiz do servidor.
 
