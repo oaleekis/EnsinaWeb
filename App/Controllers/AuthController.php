@@ -9,7 +9,7 @@ use MF\Model\Container;
 class AuthController extends Action
 {
 
-    public function autenticar()
+    public function authenticate()
     {
 
         $user = Container::getModel('User');
@@ -17,7 +17,7 @@ class AuthController extends Action
         $user->__set('email', $_POST['email']);
         $user->__set('password', md5($_POST['password']));
 
-        $user->autenticar();
+        $user->authenticate();
 
         if ($user->__get('id') != '' && $user->__get('name')) {
             echo 'Autenticado';

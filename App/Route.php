@@ -27,10 +27,10 @@ class Route extends Bootstrap
 			'controller' => 'indexController',
 			'action' => 'registrar'
 		);
-		$routes['autenticar'] = array(
+		$routes['authenticate'] = array(
 			'route' => '/autenticar',
 			'controller' => 'AuthController',
-			'action' => 'autenticar'
+			'action' => 'authenticate'
 		);
 		$routes['dashboard'] = array(
 			'route' => '/dashboard',

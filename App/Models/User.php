@@ -68,7 +68,7 @@ class User extends Model
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function autenticar()
+    public function authenticate()
     {
         $query = "select id, name, email from users where email = :email and password = :password";
         $stmt = $this->db->prepare($query);
