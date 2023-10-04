@@ -15,7 +15,7 @@ class IndexController extends Action
 		$this->render('index');
 	}
 
-	public function inscreverse()
+	public function signup()
 	{
 		$this->view->user = array(
 			'name' => '',
@@ -25,10 +25,10 @@ class IndexController extends Action
 
 		$this->view->errorSignin = false;
 
-		$this->render('inscreverse');
+		$this->render('sign up');
 	}
 
-	public function registrar()
+	public function register()
 	{
 
 		$user = Container::getModel('User');
@@ -51,7 +51,7 @@ class IndexController extends Action
 
 			$this->view->errorSignin = true;
 
-			$this->render('inscreverse');
+			$this->render('signup');
 		}
 	}
 }

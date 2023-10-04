@@ -16,16 +16,16 @@ class Route extends Bootstrap
 			'action' => 'index'
 		);
 
-		$routes['inscreverse'] = array(
+		$routes['signup'] = array(
 			'route' => '/inscreverse',
 			'controller' => 'indexController',
-			'action' => 'inscreverse'
+			'action' => 'signup'
 		);
 
-		$routes['registrar'] = array(
+		$routes['register'] = array(
 			'route' => '/registrar',
 			'controller' => 'indexController',
-			'action' => 'registrar'
+			'action' => 'register'
 		);
 		$routes['authenticate'] = array(
 			'route' => '/autenticar',
@@ -54,7 +54,7 @@ class Route extends Bootstrap
 			'controller' => 'AdminController',
 			'action' => 'createCourses'
 		);
-		$routes['registrar_cursos'] = array(
+		$routes['registerCourses'] = array(
 			'route' => '/registrar_cursos',
 			'controller' => 'AdminController',
 			'action' => 'registerCourses'
