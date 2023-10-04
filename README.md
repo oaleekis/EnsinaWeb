@@ -30,7 +30,7 @@ Para iniciar o projeto em seu ambiente local, siga os passos abaixo:
 
 2. **Configurar o Servidor Web:** Configure seu servidor web (como Apache ou Nginx) para apontar para a pasta `public/` como raiz do servidor.
 
-3. **Configurar o Banco de Dados e Variáveis de Ambiente:** Configure o banco de dados e as variáveis de ambiente no arquivo `config.php`.
+3. **Configurar o Banco de Dados e Variáveis de Ambiente:** Configure o banco de dados e as variáveis de ambiente no arquivo `Connection.php`.
 
 4. **Executar o Servidor Local:** Inicie o servidor local e acesse o projeto em seu navegador.
 
