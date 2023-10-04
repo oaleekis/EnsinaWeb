@@ -31,7 +31,7 @@ class User extends Model
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':name', $this->__get('name'));
         $stmt->bindValue(':email', $this->__get('email'));
-        $stmt->bindValue(':password', $this->__get('password')); //md5() - > has 32 caracteres
+        $stmt->bindValue(':password', $this->__get('password'));
         $stmt->execute();
 
         return $this;
