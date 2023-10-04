@@ -16,7 +16,7 @@ class AppController extends Action
         if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
             $this->render('dashboard');
         } else {
-            header('Location: /?login=erro');
+            header('Location: /?login=error');
         }
     }
 }

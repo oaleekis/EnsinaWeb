@@ -45,5 +45,3 @@ class Route extends Bootstrap {
 	}
 
 }
-
-?>

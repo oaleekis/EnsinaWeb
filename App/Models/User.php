@@ -78,7 +78,7 @@ class User extends Model
 
         $user = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-        if($user['id'] != '' && $user['name'] != '') {
+        if ($user['id'] != '' && $user['name'] != '') {
             $this->__set('id', $user['id']);
             $this->__set('name', $user['name']);
         }

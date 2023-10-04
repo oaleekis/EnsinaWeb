@@ -29,7 +29,7 @@ class AuthController extends Action
 
             header('Location: /dashboard');
         } else {
-            header('Location: /?login=erro');
+            header('Location: /?login=error');
         }
     }
 

@@ -1,14 +1,15 @@
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 body {
-	font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background-color: #1da1f2;
 }
 
 h1 {
-	display: block;
+    display: block;
     font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
@@ -18,7 +19,7 @@ h1 {
 }
 
 h2 {
-	display: block;
+    display: block;
     font-size: 1.5em;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
@@ -28,7 +29,7 @@ h2 {
 }
 
 .banner {
-	height: 100%;
+    height: 100%;
 }
 
 .login-card {
@@ -38,32 +39,32 @@ h2 {
 }
 
 .title {
-	color: #1da1f2;
-	font-size: 27px;
+    color: #1da1f2;
+    font-size: 27px;
     line-height: 32px;
 }
 
 .subtitle {
-	color: #14171a;
+    color: #14171a;
     font-size: 18px;
     line-height: 24px;
     margin: 16px auto;
 }
 
 .form-control {
-	background-color: #fff;
+    background-color: #fff;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
 }
 
 .comunicacao {
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .communicationItem {
-	color: #fff;
+    color: #fff;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
