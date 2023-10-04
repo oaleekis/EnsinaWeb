@@ -32,7 +32,7 @@ class AdminController extends Action
 		if ($course->validateDate() && count($course->getCourse()) == 0) {
 
 			$course->save();
-			$this->render('index'); // TODO: tela de sucesso ao cadastrar curso
+			$this->render('registerSuccess'); 
 		} else {
 			$this->render('index'); // TODO: tela de erro ao cadastrar curso
 		}
