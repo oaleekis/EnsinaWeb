@@ -25,7 +25,7 @@ class IndexController extends Action
 
 		$this->view->errorSignin = false;
 
-		$this->render('sign up');
+		$this->render('signup');
 	}
 
 	public function register()
