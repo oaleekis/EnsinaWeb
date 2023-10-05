@@ -25,12 +25,11 @@ class AdminController extends Action
 
 		$course->__set('name', $_POST['name']);
 		$course->__set('description', $_POST['description']);
-		$course->__set('category', md5($_POST['category']));
-		$course->__set('qty_lesson', md5($_POST['qty_lesson']));
-		$course->__set('total_hours', md5($_POST['total_hours']));
+		$course->__set('category', $_POST['category']);
+		$course->__set('qty_lesson',  isset($_POST['qty_lesson'] ) ? $_POST['qty_lesson'] : 0);
+		$course->__set('total_hours', isset($_POST['total_hours']) ? $_POST['total_hours'] : 0);
 
-		if ($course->validateDate() && count($course->getCourse()) == 0) {
-
+		if ($course->validateDate()) {
 			$course->save();
 			$this->render('registerSuccess'); 
 		} else {

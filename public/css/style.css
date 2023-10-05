@@ -5,6 +5,10 @@ body {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #fff;
+}
+
+.bg-blue {
     background-color: #1da1f2;
 }
 

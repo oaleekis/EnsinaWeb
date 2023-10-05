@@ -49,7 +49,7 @@ class Course extends Model
         if (strlen($this->__get('name')) < 3) {
             $validate = false;
         }
-        if (!filter_var($this->__get('description') < 5)) {
+        if (strlen($this->__get('description') < 5)) {
             $validate = false;
         }
 
