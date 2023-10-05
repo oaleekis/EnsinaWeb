@@ -37,6 +37,31 @@ class Route extends Bootstrap
 			'controller' => 'AppController',
 			'action' => 'dashboard'
 		);
+		$routes['dashboard'] = array(
+			'route' => '/dashboard',
+			'controller' => 'AppController',
+			'action' => 'dashboard'
+		);
+		$routes['meus_cursos'] = array(
+			'route' => '/meus_cursos',
+			'controller' => 'AppController',
+			'action' => 'myCourses'
+		);
+		$routes['meu_perfil'] = array(
+			'route' => '/meu_perfil',
+			'controller' => 'AppController',
+			'action' => 'myProfile'
+		);
+		$routes['certificados'] = array(
+			'route' => '/certificados',
+			'controller' => 'AppController',
+			'action' => 'certificates'
+		);
+		$routes['ajuda'] = array(
+			'route' => '/ajuda',
+			'controller' => 'AppController',
+			'action' => 'help'
+		);
 		$routes['logout'] = array(
 			'route' => '/logout',
 			'controller' => 'AuthController',

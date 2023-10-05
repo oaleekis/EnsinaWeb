@@ -19,4 +19,55 @@ class AppController extends Action
             header('Location: /?login=error');
         }
     }
+
+    public function myCourses()
+    {
+        session_start();
+
+
+        if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+            $this->render('myCourses');
+        } else {
+            header('Location: /?login=error');
+        }
+        
+    }
+
+    public function myProfile()
+    {
+        session_start();
+
+
+        if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+            $this->render('myProfile');
+        } else {
+            header('Location: /?login=error');
+        }
+        
+    }
+
+    public function certificates()
+    {
+        session_start();
+
+
+        if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+            $this->render('certificates');
+        } else {
+            header('Location: /?login=error');
+        }
+        
+    }
+    
+    public function help()
+    {
+        session_start();
+
+
+        if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+            $this->render('help');
+        } else {
+            header('Location: /?login=error');
+        }
+    }
 }
