@@ -70,4 +70,14 @@ class Course extends Model
 
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+
+    public function getAll()
+    {
+        $query = "select id, name, description, category, qty_lesson, total_hours, created_at, updated_at from courses";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }

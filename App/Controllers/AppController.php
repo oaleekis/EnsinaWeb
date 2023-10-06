@@ -14,6 +14,14 @@ class AppController extends Action
 
 
         if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+
+            // recuperar todos cursos
+            $course =  Container::getModel('Course');
+
+            $courses = $course->getAll();
+
+            $this->view->courses = $courses;
+
             $this->render('dashboard');
         } else {
             header('Location: /?login=error');
@@ -30,7 +38,6 @@ class AppController extends Action
         } else {
             header('Location: /?login=error');
         }
-        
     }
 
     public function myProfile()
@@ -43,7 +50,6 @@ class AppController extends Action
         } else {
             header('Location: /?login=error');
         }
-        
     }
 
     public function certificates()
@@ -56,9 +62,8 @@ class AppController extends Action
         } else {
             header('Location: /?login=error');
         }
-        
     }
-    
+
     public function help()
     {
         session_start();
