@@ -68,6 +68,23 @@ class User extends Model
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+    //recuperar um usuário por id
+    public function getUserById($id)
+    {
+        $query = "select name, email, password from users where id = :id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':id', $id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        // Verifique se a consulta foi bem-sucedida antes de buscar os resultados
+        if ($stmt->execute()) {
+            return $stmt->fetch(\PDO::FETCH_ASSOC);
+        } else {
+            // Trate os erros de consulta, se houver
+            return false;
+        }
+    }
+
     public function authenticate()
     {
         $query = "select id, name, email from users where email = :email and password = :password";

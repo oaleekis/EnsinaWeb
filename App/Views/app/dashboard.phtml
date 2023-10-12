@@ -1,24 +1,11 @@
  <div class="container">
 
      <div class="row profile">
-         <?php include ('profileSidebar.phtml'); ?>
-          <div class="col-md-9 order-content">
+         <?php include('profileSidebar.phtml'); ?>
+         <div class="col-md-9 order-content">
 
-          <h1>Dashboard</h1>
-        
-          <?php 
-          foreach ($this->view->courses as $id_course => $course) { ?>
-          <h1>---------------------------</h1>
-           <p><?=$course['name']?></p>
-           <p><?=$course['description']?></p>
-           <p><?=$course['category']?></p>
-           <p><?=$course['qty_lesson']?></p>
-           <p><?=$course['total_hours']?></p>
-           <p><?=$course['created_at']?></p>
-           <p><?=$course['updated_at']?></p>
-           <h1>---------------------------</h1>
-
-           <?php  } ?>
-          </div>
-      </div>
+             <h1>Dashboard</h1>
+ 
+         </div>
+     </div>
  </div>

@@ -15,13 +15,6 @@ class AppController extends Action
 
         if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
 
-            // recuperar todos cursos
-            $course =  Container::getModel('Course');
-
-            $courses = $course->getAll();
-
-            $this->view->courses = $courses;
-
             $this->render('dashboard');
         } else {
             header('Location: /?login=error');
@@ -34,6 +27,12 @@ class AppController extends Action
 
 
         if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+            // recuperar todos cursos
+            $course =  Container::getModel('Course');
+
+            $courses = $course->getAll();
+
+            $this->view->courses = $courses;
             $this->render('myCourses');
         } else {
             header('Location: /?login=error');
@@ -46,6 +45,12 @@ class AppController extends Action
 
 
         if ($_SESSION['id'] != '' && $_SESSION['name'] != '') {
+
+            $user = Container::getModel('User');
+
+            $users = $user->getUserById($_SESSION['id']);
+
+            $this->view->users = $users;
             $this->render('myProfile');
         } else {
             header('Location: /?login=error');
